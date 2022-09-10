@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Users from './components/users/Users';
+import Home from './components/shared/Home';
+import About from './components/shared/About';
+import Nomatch from './components/shared/Nomatch';
+import Navbar from './components/shared/Navbar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// this is defining your navigation routes for front end
+// if you want a new page, you have to have a route 
+const App = () => (
+  <>  
+    <Navbar />
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/about' element={<About />} />
+      <Route path='/subs' element={<Users />} />
+      {/* :subId is a placeholde for the parent id */}
+      <Route path='/*' element={<Nomatch />} />
+    </Routes>
+    {/* <Footer /> */}
+  </>
+)
 
 export default App;
