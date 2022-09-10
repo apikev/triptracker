@@ -2,7 +2,7 @@ class Api::LocationsController < ApplicationController
   before_action :set_parent
 
   def index
-    render json: @user.location(s)
+    render json: @trip.location(s)
   end
 
   def show
@@ -39,6 +39,6 @@ end
 
 private
   def set_parent
-    @parent = User.find(params[:parent_id])
+    @parent = Trip.find(params[:parent_id])
   end
 end

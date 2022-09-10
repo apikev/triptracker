@@ -39,6 +39,6 @@ class Api::TripsController < ApplicationController
 
   private
   def set_parent
-    @parent = User.find(params[:parent_id])
+  @parent = User.find(params[:parent_id])
   end
 end
