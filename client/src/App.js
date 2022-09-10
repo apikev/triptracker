@@ -13,7 +13,7 @@ const App = () => (
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/about' element={<About />} />
-      <Route path='/subs' element={<Users />} />
+      <Route path='/users' element={<Users />} />
       {/* :subId is a placeholde for the parent id */}
       <Route path='/*' element={<Nomatch />} />
     </Routes>
