@@ -27,7 +27,18 @@ const UserForm = ({ addUser, username, setEdit, updateUser }) => {
   <>
     <h2>{ username ? 'Edit' : 'Create' } Sub</h2>
     <form onSubmit={handleSubmit}>
-      <label></label>
+      <label>Title</label>
+      <input
+        name='title'
+        value={sub.title}
+        onChange={(e) => setUser({ ...user, title: e.target.value })}
 
+        required
+        />
+        <button type='submit'>submit</button>
     </form>
   </>
+  )
+}
+
+export default UserForm;
