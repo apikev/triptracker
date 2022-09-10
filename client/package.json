@@ -12,7 +12,11 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+<<<<<<< HEAD
   "proxy": "http://localhost:3000",
+=======
+  "proxy": "http://localhost:3001",
+>>>>>>> 85a121bf5dc38613d960976af5945644f6170bb2
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
