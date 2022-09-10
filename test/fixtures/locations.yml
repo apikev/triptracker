@@ -2,16 +2,6 @@
 
 one:
   loc_name: MyString
-  street_address: MyString
-  city: MyString
-  state: MyString
-  zip: MyString
-  trip: one
 
 two:
   loc_name: MyString
-  street_address: MyString
-  city: MyString
-  state: MyString
-  zip: MyString
-  trip: two
