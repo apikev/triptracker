@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
   namespace :api do
-    resources :controller_names
+    resources :users do
+      resources :trips
+    end
+
+    resources :trips, only: [:index, :show, :create, :update, :destroy] do
+      resources :locations
+    end
+
+    resources :locations, only: [:index, :show, :create, :update, :destroy] do
+      resources :addresses
+    end
   end
-
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-  
-  # namespace :api do
-  #   resources :
-  # end
-
 end
